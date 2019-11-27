@@ -1,0 +1,43 @@
+from google.cloud import texttospeech
+import os
+import random
+import string
+import pygame
+
+class GTTS():
+
+    def __init__(self):
+        # init tts_client
+        self.tts_client = texttospeech.TextToSpeechClient()
+
+    # Set the text input to be synthesized
+    def speak(self,text):
+        synthesis_input = texttospeech.types.SynthesisInput(text=text)
+
+        # voice gender ("neutral")
+        voice = texttospeech.types.VoiceSelectionParams(
+            language_code="en-US",
+        ssml_gender = texttospeech.enums.SsmlVoiceGender.NEUTRAL)
+
+        # Select the type of audio file you want returned
+        audio_config = texttospeech.types.AudioConfig(
+            audio_encoding=texttospeech.enums.AudioEncoding.MP3)
+
+        response = self.tts_client.synthesize_speech(synthesis_input, voice, audio_config)
+
+        fname = os.getcwd() + '/tts-temp' + ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6)) + '.mp3'
+
+        # The response's audio_content is binary.
+        out = open(fname, 'wb')
+        # Write the response to the output file.
+        out.write(response.audio_content)
+        #print('Audio content written to file ' + fname)
+        out.close()
+
+        pygame.mixer.init()
+        pygame.mixer.music.load(fname)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy() == True:
+            continue
+        #playsound(fname, True)
+        os.remove(fname)

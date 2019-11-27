@@ -1,0 +1,87 @@
+Language model created by QuickLM on Fri Nov 22 03:11:09 EST 2019
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 10 sentences and 17 words
+
+\data\
+ngram 1=17
+ngram 2=27
+ngram 3=20
+
+\1-grams:
+-0.9243 </s> -0.3010
+-0.9243 <s> -0.2460
+-1.6232 ALARM -0.2460
+-1.9243 ASHTRAY -0.2460
+-1.9243 CHANGE -0.2798
+-1.6232 CHECK -0.2688
+-1.9243 DEGREES -0.2460
+-1.9243 FIFTY -0.2460
+-1.9243 GOODBYE -0.2460
+-1.9243 HELLO -0.2460
+-1.6232 IS -0.2798
+-1.9243 STEERWHEEL -0.2460
+-1.9243 TEMPERATURE -0.2958
+-1.3222 THE -0.2744
+-1.9243 THIRTY -0.2460
+-1.9243 TO -0.2460
+-1.6232 WHERE -0.2906
+
+\2-grams:
+-1.3010 <s> CHANGE 0.0000
+-1.0000 <s> CHECK 0.0000
+-1.3010 <s> DEGREES 0.0000
+-1.3010 <s> FIFTY 0.0000
+-1.3010 <s> GOODBYE 0.0000
+-1.3010 <s> HELLO 0.0000
+-1.3010 <s> THIRTY 0.0000
+-1.0000 <s> WHERE 0.0000
+-0.3010 ALARM </s> -0.3010
+-0.3010 ASHTRAY </s> -0.3010
+-0.3010 CHANGE THE -0.2430
+-0.6021 CHECK ALARM 0.0000
+-0.6021 CHECK THE -0.2430
+-0.3010 DEGREES </s> -0.3010
+-0.3010 FIFTY </s> -0.3010
+-0.3010 GOODBYE </s> -0.3010
+-0.3010 HELLO </s> -0.3010
+-0.3010 IS THE -0.1761
+-0.3010 STEERWHEEL </s> -0.3010
+-0.3010 TEMPERATURE TO 0.0000
+-0.9031 THE ALARM 0.0000
+-0.9031 THE ASHTRAY 0.0000
+-0.9031 THE STEERWHEEL 0.0000
+-0.9031 THE TEMPERATURE 0.0000
+-0.3010 THIRTY </s> -0.3010
+-0.3010 TO </s> -0.3010
+-0.3010 WHERE IS 0.0000
+
+\3-grams:
+-0.3010 <s> CHANGE THE
+-0.6021 <s> CHECK ALARM
+-0.6021 <s> CHECK THE
+-0.3010 <s> DEGREES </s>
+-0.3010 <s> FIFTY </s>
+-0.3010 <s> GOODBYE </s>
+-0.3010 <s> HELLO </s>
+-0.3010 <s> THIRTY </s>
+-0.3010 <s> WHERE IS
+-0.3010 CHANGE THE TEMPERATURE
+-0.3010 CHECK ALARM </s>
+-0.3010 CHECK THE ALARM
+-0.6021 IS THE ASHTRAY
+-0.6021 IS THE STEERWHEEL
+-0.3010 TEMPERATURE TO </s>
+-0.3010 THE ALARM </s>
+-0.3010 THE ASHTRAY </s>
+-0.3010 THE STEERWHEEL </s>
+-0.3010 THE TEMPERATURE TO
+-0.3010 WHERE IS THE
+
+\end\
